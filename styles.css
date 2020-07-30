@@ -1,46 +1,53 @@
 body, html {
-  height: 100%;
-  margin: 0;
-}
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bgimg {
+    background-color: #333048;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+  }
 
-.bgimg {
-  background-image: url('https://i.pinimg.com/originals/60/c8/a6/60c8a61a4f0f648a280c7dc8156baec1.gif');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
-}
-
-.bottomleft {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  bottom:2px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-a{
-  text-decoration:none;
-  color:white;
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  
+  .bottomleft {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    bottom:2px;
+  }
+  
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  hr {
+    margin: auto;
+    width: 40%;
+  }
+  a{
+    text-decoration:none;
+    color:white;
+  }
+  #footer{
+    text-align: center;
+    color: white;
+    background-color: black;
+    line-height: 0%;
+    padding: 1%;
 }
