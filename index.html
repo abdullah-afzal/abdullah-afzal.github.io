@@ -5,54 +5,34 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Abdullah Afzal</title>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
 </head>
 
 <body>
+
+
 <div class="bgimg">
   <div class="topleft">
-    <p>ABDULLAH AFZAL</p>
+    <h1>
+      A<a href="" class="typewrite" style="color: brown;" data-period="2000" data-type='[ "BDULLAH"]'>
+        <span class="wrap"></span>
+      </a> AFZAL
+    </h1>
   </div>
   <div class="middle">
-    <h1>COMING SOON</h1>
-    <h5>Our website is under construction</h5>
+    <h3 style=" font-family: monospace;">KEEP CALM AND WAITE WE'RE <span style="color: brown;">COMING SOON...</span></h3>
     <hr>
-    <p id="demo" style="font-size:30px"></p>
+    <p id="demo" style="font-size:50px"></p>
   </div>
   <div class="bottomleft">
-    <a href="https://web.facebook.com/profile.php?id=100004274205785">Facebook </a><a href="https://www.linkedin.com/in/abdullah-afzal-5a5120176/"> LinkedIn </a>
+    <a href="https://web.facebook.com/profile.php?id=100004274205785" target="blank">Facebook </a>
+    <a href="https://www.linkedin.com/in/abdullah-afzal-5a5120176/" target="blank"> LinkedIn </a>
+    <a href="https://github.com/abdullah-afzal" target="blank">GitHub </a>
   </div>
 </div>
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-  
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-  
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
 </body>
+<footer  id="footer">
+ <p>Copyright © AyinAfzal</p>
+</footer>
 </html>
