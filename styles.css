@@ -25,6 +25,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  bottom:2px;
 }
 
 .middle {
@@ -41,4 +42,5 @@ hr {
 }
 a{
   text-decoration:none;
+  color:white;
 }
