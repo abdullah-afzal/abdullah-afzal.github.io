@@ -30,15 +30,15 @@ body, html {
   
   .middle {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 60%;
+    left: 40%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    
   }
   
   hr {
     margin: auto;
-    width: 40%;
+    width: 80%;
   }
   a{
     text-decoration:none;
