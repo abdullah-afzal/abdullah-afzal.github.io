@@ -14,10 +14,14 @@ body, html {
     font-size: 25px;
   }
 
-  .topleft {
+  .top {
     position: absolute;
     top: 0;
     left: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 50px);
   }
   
   .bottomleft {
@@ -25,12 +29,12 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    bottom:2px;
+    bottom:30px;
   }
   
   .middle {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
     
@@ -50,4 +54,129 @@ body, html {
     background-color: black;
     line-height: 0%;
     padding: 1%;
+}
+
+@media (max-width: 1000px) {
+  .middle {
+    top: 40%;
+  }
+  .bottomleft {
+    font-size: 49px;
+    bottom:50px;
+  }
+}
+
+/* styling for contact page */
+.contact-middle {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  
+}
+
+.social-button i {
+  margin-right: 10px; /* Adjust icon spacing as needed */
+  border-radius: 50%;
+  background-color: white; /* Adjust icon background color as needed */
+  padding: 5px; /* Adjust icon padding as needed */
+}
+
+
+
+
+/* <button class="button-17" role="button">Button 17</button> */
+
+/* CSS */
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 1px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+/* Add media query for screens less than 900px */
+@media (max-width: 1000px) {
+  .contact-middle {
+    flex-direction: column;
+  }
+
+  .contact-middle > div {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .contact-middle > div:nth-child(2) {
+    order: 1;
+  }
+
+  .contact-middle > div:nth-child(3) {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 20px;
+  }
 }
