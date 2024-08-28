@@ -17,6 +17,35 @@
 </head>
 
 <body>
+    <div id="navbar">
+        <div class="logo">
+            <a href="/">
+                
+                    ABDULLAH AFZAL
+                  
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/">Blog</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    
+
     <div id="sidebar">
         <a href="#what-is-it">What is it?</a>
         <a href="#how-to-install">How to Install</a>
