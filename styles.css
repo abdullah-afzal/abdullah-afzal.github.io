@@ -4,12 +4,12 @@ body, html {
   }
   
   .bgimg {
-    background-color: #333048;
+    /* background-color: #333048; */
     height: 100%;
     background-position: center;
     background-size: cover;
     position: relative;
-    color: white;
+    /* color: white; */
     font-family: "Courier New", Courier, monospace;
     font-size: 25px;
   }
@@ -46,7 +46,7 @@ body, html {
   }
   a{
     text-decoration:none;
-    color:white;
+    /* color:white; */
   }
   #footer{
     text-align: center;

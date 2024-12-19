@@ -11,8 +11,13 @@
     <meta property="og:image" content="https://abdullah-afzal.github.io/media/medusa-payment-basecoin-banner.png" />
     <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
     <link rel="stylesheet" href="plugin.css">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "free-consultation", { origin: "https://cal.com" });
+        Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
+    <!-- Cal element-click embed code ends -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -20,9 +25,9 @@
     <div id="navbar">
         <div class="logo">
             <a href="/">
-                
-                    ABDULLAH AFZAL
-                  
+
+                ABDULLAH AFZAL
+
             </a>
         </div>
         <div class="nav-links">
@@ -44,7 +49,7 @@
             navLinks.classList.toggle('active');
         });
     </script>
-    
+
 
     <div id="sidebar">
         <a href="#what-is-it">What is it?</a>
@@ -63,21 +68,24 @@
             <h1 style="margin: 0;">X</h1>
             <img src="icon/medusa.svg" alt="Medusa logo" style="width: 8%;" />
         </div>
-        
-        
+
+
 
         <p><a href="https://github.com/abdullah-afzal/medusa-payment-coinbase/blob/main/README.md">Documentation</a></p>
 
-        <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the project web site</a>.</p>
+        <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the project
+                web site</a>.</p>
 
-        <h2 id="note"><i class="fas fa-bullhorn" style="font-size: 24px; margin-right: 10px;"></i>Note: This plugin will be migrated to Medusa v2, when v2 reaches production readiness.</h2>
+        <h2 id="note"><i class="fas fa-bullhorn" style="font-size: 24px; margin-right: 10px;"></i>Note: This plugin will
+            be migrated to Medusa v2, when v2 reaches production readiness.</h2>
 
         <h2 id="what-is-it" class="section">What is it?</h2>
         <p>An onchain payment provider using Coinbase integration with Medusa.</p>
 
         <h2 id="how-to-install" class="section">How to Install</h2>
         <ol>
-            <li>Install the package with <code>yarn add medusa-payment-coinbase</code> or <code>npm i medusa-payment-coinbase</code></li>
+            <li>Install the package with <code>yarn add medusa-payment-coinbase</code> or
+                <code>npm i medusa-payment-coinbase</code></li>
             <li>Set the following environment variables in your <code>.env</code> file:
                 <pre><code>COINBASE_API_KEY=&lt;YOUR_COINBASE_X-CC-Api-Key&gt;
 COINBASE_CANCEL_URL=&lt;REDIRECT_URL_AFTER_CANCEL&gt;
@@ -100,22 +108,29 @@ COINBASE_REDIRECT_URL=&lt;REDIRECT_URL_AFTER_PAYMENT_COMPLETE&gt;
             </li>
             <li>Start the project
                 <ul>
-                    <li>After installation, you will see a new payment provider in regions named <strong>CoinBase</strong>.</li>
+                    <li>After installation, you will see a new payment provider in regions named
+                        <strong>CoinBase</strong>.</li>
                 </ul>
             </li>
         </ol>
 
         <h2 id="test-the-plugin" class="section">Test the Plugin</h2>
-        <p>After configuring and setting Coinbase as a payment provider, when you select Coinbase to complete your payment on the storefront, you will get the checkout URL by accessing <code>session.data.hosted_url</code>, where <code>session</code> is the <code>payment_session_data</code> of the selected payment provider.</p>
+        <p>After configuring and setting Coinbase as a payment provider, when you select Coinbase to complete your
+            payment on the storefront, you will get the checkout URL by accessing <code>session.data.hosted_url</code>,
+            where <code>session</code> is the <code>payment_session_data</code> of the selected payment provider.</p>
 
         <h2 id="proposals-bugs-improvements" class="section">Proposals, Bugs, Improvements</h2>
-        <p>If you have an idea for what could be the next highest priority functionality, do not hesitate to raise an issue here: <a href="https://github.com/abdullah-afzal/medusa-payment-coinbase/issues">Github issues</a>.</p>
+        <p>If you have an idea for what could be the next highest priority functionality, do not hesitate to raise an
+            issue here: <a href="https://github.com/abdullah-afzal/medusa-payment-coinbase/issues">Github issues</a>.
+        </p>
 
         <h2 id="license" class="section">License</h2>
         <p>MIT</p>
 
         <h2 id="pro-version" class="section">Pro Version</h2>
-        <p>This community version only enables you to create a hosted payment URL for your cart and complete the payment. The Pro version of medusa-payment-coinbase expands on the features of the free version with more advanced capabilities such as:</p>
+        <p>This community version only enables you to create a hosted payment URL for your cart and complete the
+            payment. The Pro version of medusa-payment-coinbase expands on the features of the free version with more
+            advanced capabilities such as:</p>
         <ul>
             <li>Automatic authorization of payment and placing an order after completing the payment</li>
             <li>Automatic payment capture for orders</li>
@@ -124,14 +139,18 @@ COINBASE_REDIRECT_URL=&lt;REDIRECT_URL_AFTER_PAYMENT_COMPLETE&gt;
             <li>Dedicated integration support for your project (Diamond package)</li>
         </ul>
 
-        <p>The Pro version is available under a commercial license. Contact <a href="https://github.com/abdullah-afzal">abdullah-afzal</a> for more information.</p>
+        <p>The Pro version is available under a commercial license. Contact <a
+                href="https://github.com/abdullah-afzal">abdullah-afzal</a> for more information.</p>
 
         <hr />
         <p>© 2024 <a href="https://github.com/abdullah-afzal">abdullah-afzal</a></p>
     </div>
 
     <footer>
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/abdullahafzal/consultation'});return false;">Meeting</a>
+        <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
+            data-cal-config='{"layout":"month_view","theme":"auto"}'>
+            Meeting
+        </a>
         <a href="https://www.linkedin.com/in/abdullah-afzal/" target="_blank">LinkedIn</a>
         <a href="https://github.com/abdullah-afzal" target="_blank">GitHub</a>
         <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="_blank">Upwork</a>

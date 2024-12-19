@@ -2,61 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Afzal || Currency Code Converter - Node.js Module</title>
-    <meta property="og:title" content="Currency Code Converter - Node.js Module" />
-    <meta property="og:description"
-        content="A simple Node.js module for converting between different formats of currency data, including currency, country, code, and number." />
-    <meta property="og:type" content="blog" />
-    <meta property="og:image" content="https://abdullah-afzal.github.io/media/currency-code-converter-banner.png" />
-    <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
-    <link rel="stylesheet" href="plugin.css">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdullah Afzal || Currency Code Converter - Node.js Module</title>
+  <meta property="og:title" content="Currency Code Converter - Node.js Module" />
+  <meta property="og:description"
+    content="A simple Node.js module for converting between different formats of currency data, including currency, country, code, and number." />
+  <meta property="og:type" content="blog" />
+  <meta property="og:image" content="https://abdullah-afzal.github.io/media/currency-code-converter-banner.png" />
+  <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
+  <link rel="stylesheet" href="plugin.css">
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "free-consultation", { origin: "https://cal.com" });
+    Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+  </script>
+  <!-- Cal element-click embed code ends -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
   <div id="navbar">
     <div class="logo">
-        <a href="/">
-            
-                ABDULLAH AFZAL
-              
-        </a>
+      <a href="/">
+
+        ABDULLAH AFZAL
+
+      </a>
     </div>
     <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/">Blog</a>
-        <a href="/contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/">Blog</a>
+      <a href="/contact.html">Contact</a>
     </div>
-</div>
-    <div id="sidebar">
-        <a href="#installation">Installation</a>
-        <a href="#usage">Usage</a>
-        <a href="#functions">Functions</a>
-        <a href="#license">License</a>
-    </div>
+  </div>
+  <div id="sidebar">
+    <a href="#installation">Installation</a>
+    <a href="#usage">Usage</a>
+    <a href="#functions">Functions</a>
+    <a href="#license">License</a>
+  </div>
 
-    <div id="content">
-        <a href="/">plugin</a> > <a>currency-code-converter</a>
-        <h1 style="text-align: center;">Currency Code Converter</h1>
+  <div id="content">
+    <a href="/">plugin</a> > <a>currency-code-converter</a>
+    <h1 style="text-align: center;">Currency Code Converter</h1>
 
-        <p><a href="https://github.com/abdullah-afzal/currency-code-converter/blob/main/README.md">Documentation</a></p>
+    <p><a href="https://github.com/abdullah-afzal/currency-code-converter/blob/main/README.md">Documentation</a></p>
 
-        <p>If you are new to Node.js, you can learn more on <a href="https://nodejs.org/">the official Node.js
-                website</a>.</p>
+    <p>If you are new to Node.js, you can learn more on <a href="https://nodejs.org/">the official Node.js
+        website</a>.</p>
 
-        <h2 id="installation" class="section">Installation</h2>
-        <p>To use this module in your Node.js project, you can install it using npm:</p>
-        <pre><code>npm install currency-code-converter</code></pre>
+    <h2 id="installation" class="section">Installation</h2>
+    <p>To use this module in your Node.js project, you can install it using npm:</p>
+    <pre><code>npm install currency-code-converter</code></pre>
 
-        <h2 id="usage" class="section">Usage</h2>
+    <h2 id="usage" class="section">Usage</h2>
 
-        <h3>Node.js (JavaScript)</h3>
-        <pre><code>const converter = require('currency-code-converter');
+    <h3>Node.js (JavaScript)</h3>
+    <pre><code>const converter = require('currency-code-converter');
 
  Example: Convert currency to number
 try {
@@ -77,8 +82,8 @@ try {
 // Additional functions follow a similar pattern for code and number conversions.
 </code></pre>
 
-        <h3>React (JavaScript)</h3>
-        <pre><code>import React, { useState } from 'react';
+    <h3>React (JavaScript)</h3>
+    <pre><code>import React, { useState } from 'react';
 import Converter from 'currency-code-converter';
 
 const App = () => {
@@ -110,60 +115,63 @@ const App = () => {
 export default App;
 </code></pre>
 
-        <h2 id="functions" class="section">Functions</h2>
+    <h2 id="functions" class="section">Functions</h2>
 
-        <h3><code>currencyToNumber(currency: string): number</code></h3>
-        <p>Converts a currency to its numeric code.</p>
+    <h3><code>currencyToNumber(currency: string): number</code></h3>
+    <p>Converts a currency to its numeric code.</p>
 
-        <h3><code>currencyToCountry(currency: string): string[]</code></h3>
-        <p>Converts a currency to an array of corresponding countries.</p>
+    <h3><code>currencyToCountry(currency: string): string[]</code></h3>
+    <p>Converts a currency to an array of corresponding countries.</p>
 
-        <h3><code>currencyToCode(currency: string): string</code></h3>
-        <p>Converts a currency to its alphabetic code.</p>
+    <h3><code>currencyToCode(currency: string): string</code></h3>
+    <p>Converts a currency to its alphabetic code.</p>
 
-        <h3><code>countryToCurrency(country: string): string</code></h3>
-        <p>Converts a country to its corresponding currency.</p>
+    <h3><code>countryToCurrency(country: string): string</code></h3>
+    <p>Converts a country to its corresponding currency.</p>
 
-        <h3><code>countryToCode(country: string): string</code></h3>
-        <p>Converts a country to its alphabetic code.</p>
+    <h3><code>countryToCode(country: string): string</code></h3>
+    <p>Converts a country to its alphabetic code.</p>
 
-        <h3><code>countryToNumber(country: string): number</code></h3>
-        <p>Converts a country to its numeric code.</p>
+    <h3><code>countryToNumber(country: string): number</code></h3>
+    <p>Converts a country to its numeric code.</p>
 
-        <h3><code>codeToCountry(code: string): string[]</code></h3>
-        <p>Converts a code to an array of corresponding countries.</p>
+    <h3><code>codeToCountry(code: string): string[]</code></h3>
+    <p>Converts a code to an array of corresponding countries.</p>
 
-        <h3><code>codeToCurrency(code: string): string</code></h3>
-        <p>Converts a code to its corresponding currency.</p>
+    <h3><code>codeToCurrency(code: string): string</code></h3>
+    <p>Converts a code to its corresponding currency.</p>
 
-        <h3><code>codeToNumber(code: string): number</code></h3>
-        <p>Converts a code to its numeric code.</p>
+    <h3><code>codeToNumber(code: string): number</code></h3>
+    <p>Converts a code to its numeric code.</p>
 
-        <h3><code>numberToCountry(number: number): string[]</code></h3>
-        <p>Converts a numeric code to an array of corresponding countries.</p>
+    <h3><code>numberToCountry(number: number): string[]</code></h3>
+    <p>Converts a numeric code to an array of corresponding countries.</p>
 
-        <h3><code>numberToCurrency(number: number): string</code></h3>
-        <p>Converts a numeric code to its corresponding currency.</p>
+    <h3><code>numberToCurrency(number: number): string</code></h3>
+    <p>Converts a numeric code to its corresponding currency.</p>
 
-        <h3><code>numberToCode(number: number): string</code></h3>
-        <p>Converts a numeric code to its alphabetic code.</p>
+    <h3><code>numberToCode(number: number): string</code></h3>
+    <p>Converts a numeric code to its alphabetic code.</p>
 
-        <h3><code>allCodes(): object[]</code></h3>
-        <p>Returns an array of objects containing all countries, code, currency, number.</p>
+    <h3><code>allCodes(): object[]</code></h3>
+    <p>Returns an array of objects containing all countries, code, currency, number.</p>
 
-        <h2 id="license" class="section">License</h2>
-        <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
+    <h2 id="license" class="section">License</h2>
+    <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
 
-        <hr />
-        <p>© 2024 <a href="https://github.com/abdullah-afzal">abdullah-afzal</a></p>
-    </div>
+    <hr />
+    <p>© 2024 <a href="https://github.com/abdullah-afzal">abdullah-afzal</a></p>
+  </div>
 
-    <footer>
-        <a href="" onclick="Calendly.initPopupWidget({url: `https://calendly.com/abdullahafzal/consultation`});return false;">Meeting</a>
-        <a href="https://www.linkedin.com/in/abdullah-afzal/" target="blank">LinkedIn</a>
-        <a href="https://github.com/abdullah-afzal" target="blank">GitHub</a>
-        <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="blank">Upwork</a>
-    </footer>
+  <footer>
+    <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
+      data-cal-config='{"layout":"month_view","theme":"auto"}'>
+      Meeting
+    </a>
+    <a href="https://www.linkedin.com/in/abdullah-afzal/" target="blank">LinkedIn</a>
+    <a href="https://github.com/abdullah-afzal" target="blank">GitHub</a>
+    <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="blank">Upwork</a>
+  </footer>
 </body>
 
 </html>

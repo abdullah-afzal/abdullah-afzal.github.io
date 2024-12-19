@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Afzal || Medusa Static Pages - Plugin</title>
     <meta property="og:title" content="Medusa Static Pages - Plugin" />
-    <meta property="og:description" content="A plugin that provides a basic static pages backend for your Medusa store." />
+    <meta property="og:description"
+        content="A plugin that provides a basic static pages backend for your Medusa store." />
     <meta property="og:type" content="blog" />
     <meta property="og:image" content="https://abdullah-afzal.github.io/media/medusa-static-pages-banner.png" />
     <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
     <link rel="stylesheet" href="plugin.css">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <!-- Cal element-click embed code begins -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "free-consultation", { origin: "https://cal.com" });
+        Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
+    <!-- Cal element-click embed code ends -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -20,9 +26,9 @@
     <div id="navbar">
         <div class="logo">
             <a href="/">
-                
-                    ABDULLAH AFZAL
-                  
+
+                ABDULLAH AFZAL
+
             </a>
         </div>
         <div class="nav-links">
@@ -32,7 +38,7 @@
             <a href="/contact.html">Contact</a>
         </div>
     </div>
-    
+
     <div id="sidebar">
         <a href="#what-is-it">What is it?</a>
         <a href="#how-to-install">How to install?</a>
@@ -45,15 +51,19 @@
         <a href="/">plugins</a> > <a>medusa-plugin-static-pages</a>
         <h1 style="text-align: center;">medusa-plugin-static-pages</h1>
 
-        <p><a href="https://github.com/abdullah-afzal/medusa-plugin-static-pages/blob/main/README.md">Documentation</a></p>
+        <p><a href="https://github.com/abdullah-afzal/medusa-plugin-static-pages/blob/main/README.md">Documentation</a>
+        </p>
 
-        <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the project web
+        <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the project
+                web
                 site</a>.</p>
 
-        <h2 id="note"><i class="fas fa-bullhorn" style="font-size: 24px; margin-right: 10px;"></i>Note: This plugin is under development and should be considered experimental. Breaking changes are very likely to occur.</h2>
+        <h2 id="note"><i class="fas fa-bullhorn" style="font-size: 24px; margin-right: 10px;"></i>Note: This plugin is
+            under development and should be considered experimental. Breaking changes are very likely to occur.</h2>
 
         <h2 id="what-is-it" class="section">What is it?</h2>
-        <p>A plugin that provides implementation of static pages for your Medusa store. You can use this plugin for creating static pages like FAQ, Policy etc. quite easily for your store.</p>
+        <p>A plugin that provides implementation of static pages for your Medusa store. You can use this plugin for
+            creating static pages like FAQ, Policy etc. quite easily for your store.</p>
 
         <h2 id="how-to-install" class="section">How to install?</h2>
         <ol>
@@ -73,19 +83,19 @@
   }
 ]
 </code></pre>
-        </li>
-        <li>Run migrations, e.g. <code>npx medusa migrations run</code> (see: <a
-            href="https://docs.medusajs.com/development/entities/migrations/overview">https://docs.medusajs.com/development/entities/migrations/overview</a>)
-        as the plugin uses new tables.</li>
-    <li>Start project
-        <ul>
-            <li>After installation of the plugin, you will see a new option on the sidebar named
-                <strong>Static Pages</strong>.
             </li>
-            <li>You can check existing static pages</li>
-            <li>You can add/edit/delete static pages</li>
-        </ul>
-    </li>
+            <li>Run migrations, e.g. <code>npx medusa migrations run</code> (see: <a
+                    href="https://docs.medusajs.com/development/entities/migrations/overview">https://docs.medusajs.com/development/entities/migrations/overview</a>)
+                as the plugin uses new tables.</li>
+            <li>Start project
+                <ul>
+                    <li>After installation of the plugin, you will see a new option on the sidebar named
+                        <strong>Static Pages</strong>.
+                    </li>
+                    <li>You can check existing static pages</li>
+                    <li>You can add/edit/delete static pages</li>
+                </ul>
+            </li>
         </ol>
 
         <h2 id="api-endpoints" class="section">API Endpoints</h2>
@@ -94,19 +104,22 @@
         <ol>
             <li><strong><code>GET /store/pages</code></strong>
                 <ul>
-                    <li><strong>Description:</strong> Returns a JSON object containing an array of all page objects.</li>
+                    <li><strong>Description:</strong> Returns a JSON object containing an array of all page objects.
+                    </li>
                 </ul>
             </li>
 
             <li><strong><code>GET /store/page/:handle</code></strong>
                 <ul>
-                    <li><strong>Description:</strong> Returns a JSON object containing a single page object with the given handle.</li>
+                    <li><strong>Description:</strong> Returns a JSON object containing a single page object with the
+                        given handle.</li>
                 </ul>
             </li>
 
             <li><strong><code>GET /store/page/:id</code></strong>
                 <ul>
-                    <li><strong>Description:</strong> Returns a JSON object containing a single page object with the given ID.</li>
+                    <li><strong>Description:</strong> Returns a JSON object containing a single page object with the
+                        given ID.</li>
                 </ul>
             </li>
         </ol>
@@ -173,7 +186,10 @@
     </div>
 
     <footer>
-        <a href="" onclick="Calendly.initPopupWidget({url: `https://calendly.com/abdullahafzal/consultation`});return false;">Meeting</a>
+        <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
+            data-cal-config='{"layout":"month_view","theme":"auto"}'>
+            Meeting
+        </a>
         <a href="https://www.linkedin.com/in/abdullah-afzal/" target="blank">LinkedIn</a>
         <a href="https://github.com/abdullah-afzal" target="blank">GitHub</a>
         <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="blank">Upwork</a>

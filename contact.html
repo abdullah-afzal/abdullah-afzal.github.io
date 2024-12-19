@@ -1,46 +1,63 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-  
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Abdullah Afzal</title>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="script.js"></script>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+  <!-- Cal inline embed code begins -->
+
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "free-consultation", { origin: "https://cal.com" });
+
+    Cal.ns["free-consultation"]("inline", {
+      elementOrSelector: "#my-cal-inline",
+      config: { "layout": "month_view" },
+      calLink: "abdullah-afzal/free-consultation",
+    });
+
+    Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+  </script>
+  <!-- Cal inline embed code ends -->
 </head>
 
 <body>
 
 
-<div class="bgimg">
-  <div class="top">
-    <h1>
-      A<a href="" class="typewrite" style="color: brown;" data-period="2000" data-type='[ "BDULLAH","YIN"]'>
-        <span class="wrap"></span>
-      </a> AFZAL
-    </h1>
-    <a href="index.html" class="button-17">Home</a>
-  </div>
+  <div class="bgimg">
+    <div class="top">
+      <h1>
+        A<a href="" class="typewrite" style="color: brown;" data-period="2000" data-type='[ "BDULLAH","YIN"]'>
+          <span class="wrap"></span>
+        </a> AFZAL
+      </h1>
+      <a href="index.html" class="button-17">Home</a>
+    </div>
 
-  <div class="contact-middle" style="width: 100%; display: flex; align-items: center;">
-    <div style="width: 40%; border-right: 1px solid #ccc; padding-right: 20px; text-align: center;">
-      <h3>Use any of the following channels</h3>
-      <div style="margin-left: 10%; margin-right: 10%;">
-      <a href="https://www.linkedin.com/in/abdullah-afzal/" target="_blank" class="social-button button-17"><i style="color: blue;" class="fa fa-linkedin-square"></i> linkedIn/abdullah-afzal</a>
-      <a href="https://github.com/abdullah-afzal" target="blank" class="social-button button-17"><i class="fa fa-github"></i> github/abdullah-afzal</a>
-      <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="blank" class="social-button button-17"><i><img src="icon/upwork.svg" class=></img></i> upwork/abdullah-afzal</a>
+    <div class="contact-middle" style="align-items: center; padding-bottom: 10%; margin-top: 3%;">
+
+      <div style="width:100%;height:100%;" id="my-cal-inline"></div>
+
+      <div style="text-align: center; ">
+        <h3>Or use any of the following channels</h3>
+        <div style="margin-left: 10%; margin-right: 10%;">
+          <a href="https://www.linkedin.com/in/abdullah-afzal/" target="_blank" class="social-button button-17"><i
+              style="color: blue;" class="fa fa-linkedin-square"></i> linkedIn/abdullah-afzal</a>
+          <a href="https://github.com/abdullah-afzal" target="blank" class="social-button button-17"><i
+              class="fa fa-github"></i> github/abdullah-afzal</a>
+          <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="blank"
+            class="social-button button-17"><i><img src="icon/upwork.svg" class=></img></i> upwork/abdullah-afzal</a>
+        </div>
+      </div>
     </div>
-    </div>
-    <div style="width: 60%; padding-left: 20px;">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/abdullahafzal/Consultation" style="min-width: 320px; height: 700px;"></div>
-    </div>
-    <div style="position: absolute; left: 40%; top: 50%; transform: translate(-50%, -50%); font-weight: bold;">OR</div>
-  </div>
-  
+
 
 </body>
+
 </html>
