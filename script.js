@@ -6,7 +6,7 @@ const themeIcon = document.getElementById("theme-icon");
 const rootElement = document.documentElement;
 
 // Load theme from localStorage
-const currentTheme = localStorage.getItem("theme") || "light";
+const currentTheme = localStorage.getItem("theme") || "dark";
 rootElement.setAttribute("data-theme", currentTheme);
 themeIcon.classList.add(currentTheme === "dark" ? "fa-moon" : "fa-sun");
 

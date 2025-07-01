@@ -10,6 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 </head>
 
 <body>
@@ -69,27 +73,46 @@
   <section class="projects" data-aos="fade-up">
     <div class="container">
       <h2>Featured Projects</h2>
-      <div class="project-list">
-        <div class="project-card glass">
-          <h3>Almila</h3>
-          <p>Furniture and interior design store with custom storefront and Medusa backend integration.</p>
-          <a href="https://www.almila.co.il/" target="_blank">Visit Site</a>
+  
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Project Slide 1 -->
+          <div class="swiper-slide project-card glass">
+            <img src="/media/snapshots/almilashot.jpg" alt="Almila Preview" class="project-img" />
+            <h3>Almila</h3>
+            <p>Furniture and interior design store with custom storefront and Medusa backend integration.</p>
+            <a href="https://www.almila.co.il/" target="_blank">Visit Site</a>
+          </div>
+  
+          <!-- Project Slide 2 -->
+          <div class="swiper-slide project-card glass">
+            <img src="/media/snapshots/ajolishot.jpg" alt="Ajoli Preview" class="project-img" />
+            <h3>Ajoli Center</h3>
+            <p>Multi-language health & beauty shop with custom admin tools, secure checkout, and plugin development.</p>
+            <a href="https://ajolicenter.com/" target="_blank">Visit Site</a>
+          </div>
+  
+          <!-- Add more slides below -->
+          <div class="swiper-slide project-card glass">
+            <img src="/media/snapshots/sondosshot.jpg" alt="Sondos Preview" class="project-img" />
+            <h3>Sondos for Kids</h3>
+            <p>Children's fashion brand with responsive UI and efficient product management dashboard.</p>
+            <a href="https://sondosforkids.com/" target="_blank">Visit Site</a>
+          </div>
+  
+          <div class="swiper-slide project-card glass">
+            <img src="/media/snapshots/luxshot.jpg" alt="Luxury For You Preview" class="project-img" />
+            <h3>Luxury For You</h3>
+            <p>High-end fashion and accessories shop with geo-specific deployment and payment logic.</p>
+            <a href="https://luxuryforyou.com/us" target="_blank">Visit Site</a>
+          </div>
         </div>
-        <div class="project-card glass">
-          <h3>Ajoli Center</h3>
-          <p>Multi-language health & beauty shop with custom admin tools, secure checkout, and plugin development.</p>
-          <a href="https://ajolicenter.com/" target="_blank">Visit Site</a>
-        </div>
-        <div class="project-card glass">
-          <h3>Sondos for Kids</h3>
-          <p>Children's fashion brand with responsive UI and efficient product management dashboard.</p>
-          <a href="https://sondosforkids.com/" target="_blank">Visit Site</a>
-        </div>
-        <div class="project-card glass">
-          <h3>Luxury For You (USA)</h3>
-          <p>High-end fashion and accessories shop with geo-specific deployment and payment logic.</p>
-          <a href="https://luxuryforyou.com/us" target="_blank">Visit Site</a>
-        </div>
+  
+        <!-- Navigation & Pagination -->
+        <div class="swiper-button-next" style="color: #27ae60;"></div>
+        <div class="swiper-button-prev" style="color: #27ae60;"></div>
+        <!-- <div class="swiper-scrollbar" style="color: #27ae60;"></div> -->
       </div>
     </div>
   </section>
@@ -168,6 +191,37 @@
   <script>
     AOS.init();
   </script>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
+
   <script type="text/javascript">
     (function (C, A, L) {
       let p = function (a, ar) { a.q.push(ar); };
