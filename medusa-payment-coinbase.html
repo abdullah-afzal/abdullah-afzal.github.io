@@ -2,98 +2,84 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Afzal || Medusa Payment Coinbase</title>
-    <meta property="og:title" content="Medusa Payment Coinbase" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medusa Payment Coinbase | Abdullah Afzal</title>
+    <meta property="og:title" content="Medusa Payment Coinbase - Plugin" />
     <meta property="og:description" content="An onchain payment provider using Coinbase integration with Medusa." />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="blog" />
     <meta property="og:image" content="https://abdullah-afzal.github.io/media/medusa-payment-basecoin-banner.png" />
     <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
-    <link rel="stylesheet" href="plugin.css">
-    <!-- Cal element-click embed code begins -->
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "free-consultation", { origin: "https://cal.com" });
-        Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
-    </script>
-    <!-- Cal element-click embed code ends -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
+
 <body>
-    <div id="navbar">
-        <div class="logo">
-            <a href="/">
-
-                ABDULLAH AFZAL
-
+    <header class="header glass show" data-aos="fade-down">
+        <div class="container header-content">
+            <a href="index.html" class="branding" style="text-decoration: none; color: inherit;">
+                <h1 class="name">Abdullah Afzal</h1>
+                <p class="role">Software Engineer</p>
             </a>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </button>
         </div>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/">Blog</a>
-            <a href="/contact.html">Contact</a>
-        </div>
+    </header>
 
-        <div class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
-    <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuIcon.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
-
-
-    <div id="sidebar">
-        <a href="#what-is-it">What is it?</a>
-        <a href="#how-to-install">How to Install</a>
-        <a href="#test-the-plugin">Test the Plugin</a>
-        <a href="#proposals-bugs-improvements">Proposals, Bugs, Improvements</a>
-        <a href="#license">License</a>
-        <a href="#pro-version">Pro Version</a>
+    <div style="margin-left:170px; padding: 2rem; margin-top: 170px;" data-aos="fade-left">
+        <a href="index.html" class="back-link"
+            style="display: inline-flex; align-items: center; font-size: 1rem; color: var(--green); text-decoration: none;">
+            <i class="fas fa-angle-left" style="margin-right: 0.5rem;"></i> Back
+        </a>
     </div>
 
-    <div id="content">
-        <a href="/">plugins</a> > <a>medusa-payment-coinbase</a>
-        <h1 style="text-align: center;">medusa-payment-coinbase</h1>
-        <div style="text-align: center; display: flex; justify-content: center; align-items: center; gap: 10px;">
-            <img src="icon/coinbase.png" alt="Coinbase logo" style="width: 8%;" />
-            <h1 style="margin: 0;">X</h1>
-            <img src="icon/medusa.svg" alt="Medusa logo" style="width: 8%;" />
+    <section class="hero" data-aos="zoom-in">
+        <div class="container">
+            <h2 class="hero-title">medusa-payment-coinbase</h2>
+            <p class="hero-description">An onchain payment provider using Coinbase integration with Medusa.</p>
         </div>
+    </section>
+    <section class="container" data-aos="fade-up">
+        <div class="glass card plugin-section" style="padding: 2rem; line-height: 1.8;">
+            <p><a href="https://github.com/abdullah-afzal/medusa-payment-coinbase/blob/main/README.md">Documentation</a>
+            </p>
+
+            <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the
+                    project
+                    web site</a>.</p>
 
 
 
-        <p><a href="https://github.com/abdullah-afzal/medusa-payment-coinbase/blob/main/README.md">Documentation</a></p>
 
-        <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the project
-                web site</a>.</p>
 
-        <h2 id="note"><i class="fas fa-bullhorn" style="font-size: 24px; margin-right: 10px;"></i>Note: This plugin will
-            be migrated to Medusa v2, when v2 reaches production readiness.</h2>
 
-        <h2 id="what-is-it" class="section">What is it?</h2>
-        <p>An onchain payment provider using Coinbase integration with Medusa.</p>
 
-        <h2 id="how-to-install" class="section">How to Install</h2>
-        <ol>
-            <li>Install the package with <code>yarn add medusa-payment-coinbase</code> or
-                <code>npm i medusa-payment-coinbase</code></li>
-            <li>Set the following environment variables in your <code>.env</code> file:
-                <pre><code>COINBASE_API_KEY=&lt;YOUR_COINBASE_X-CC-Api-Key&gt;
+
+
+            <h3 id="note"><i class="fas fa-bullhorn" style="font-size: 24px; margin-right: 10px;"></i>Note: This plugin
+                will
+                be migrated to Medusa v2, when v2 reaches production readiness.</h3>
+
+            <h3><i class="fas fa-info-circle"></i> What is it?</h3>
+            <p>An onchain payment provider using Coinbase integration with Medusa.</p>
+
+            <h3><i class="fas fa-code"></i> Installation</h3>
+            <ol>
+                <li>Install the package with <code>yarn add medusa-payment-coinbase</code> or
+                    <code>npm i medusa-payment-coinbase</code>
+                </li>
+                <li>Set the following environment variables in your <code>.env</code> file:
+                    <pre><code>COINBASE_API_KEY=&lt;YOUR_COINBASE_X-CC-Api-Key&gt;
 COINBASE_CANCEL_URL=&lt;REDIRECT_URL_AFTER_CANCEL&gt;
 COINBASE_REDIRECT_URL=&lt;REDIRECT_URL_AFTER_PAYMENT_COMPLETE&gt;
 </code></pre>
-            </li>
-            <li>In <code>medusa-config.js</code>, add the following at the end of the <code>plugins</code> array:
-                <pre><code>const plugins = [
+                </li>
+                <li>In <code>medusa-config.js</code>, add the following at the end of the <code>plugins</code> array:
+                    <pre><code>const plugins = [
   // ...
   {
     resolve: `medusa-payment-coinbase`,
@@ -105,56 +91,114 @@ COINBASE_REDIRECT_URL=&lt;REDIRECT_URL_AFTER_PAYMENT_COMPLETE&gt;
   },
 ]
 </code></pre>
-            </li>
-            <li>Start the project
-                <ul>
-                    <li>After installation, you will see a new payment provider in regions named
-                        <strong>CoinBase</strong>.</li>
-                </ul>
-            </li>
-        </ol>
+                </li>
+                <li>Start the project
+                    <ul>
+                        <li>After installation, you will see a new payment provider in regions named
+                            <strong>CoinBase</strong>.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
 
-        <h2 id="test-the-plugin" class="section">Test the Plugin</h2>
-        <p>After configuring and setting Coinbase as a payment provider, when you select Coinbase to complete your
-            payment on the storefront, you will get the checkout URL by accessing <code>session.data.hosted_url</code>,
-            where <code>session</code> is the <code>payment_session_data</code> of the selected payment provider.</p>
+            <h3><i class="fas fa-plug"></i> Test the Plugin</h3>
+            <p>After configuring and setting Coinbase as a payment provider, when you select Coinbase to complete your
+                payment on the storefront, you will get the checkout URL by accessing
+                <code>session.data.hosted_url</code>,
+                where <code>session</code> is the <code>payment_session_data</code> of the selected payment provider.
+            </p>
 
-        <h2 id="proposals-bugs-improvements" class="section">Proposals, Bugs, Improvements</h2>
-        <p>If you have an idea for what could be the next highest priority functionality, do not hesitate to raise an
-            issue here: <a href="https://github.com/abdullah-afzal/medusa-payment-coinbase/issues">Github issues</a>.
-        </p>
+            <h3><i class="fas fa-star-of-life"></i> Proposals, Bugs, Improvements</h3>
+            <p>If you have an idea for what could be the next highest priority functionality, do not hesitate to raise
+                an
+                issue here: <a href="https://github.com/abdullah-afzal/medusa-payment-coinbase/issues">Github
+                    issues</a>.
+            </p>
 
-        <h2 id="license" class="section">License</h2>
-        <p>MIT</p>
 
-        <h2 id="pro-version" class="section">Pro Version</h2>
-        <p>This community version only enables you to create a hosted payment URL for your cart and complete the
-            payment. The Pro version of medusa-payment-coinbase expands on the features of the free version with more
-            advanced capabilities such as:</p>
-        <ul>
-            <li>Automatic authorization of payment and placing an order after completing the payment</li>
-            <li>Automatic payment capture for orders</li>
-            <li>Webhooks</li>
-            <li>Refund and delete payment</li>
-            <li>Dedicated integration support for your project (Diamond package)</li>
-        </ul>
 
-        <p>The Pro version is available under a commercial license. Contact <a
-                href="https://github.com/abdullah-afzal">abdullah-afzal</a> for more information.</p>
+            <h3><i class="fas fa-wand-magic-sparkles"></i> Pro Version</h3>
+            <p>This community version only enables you to create a hosted payment URL for your cart and complete the
+                payment. The Pro version of medusa-payment-coinbase expands on the features of the free version with
+                more
+                advanced capabilities such as:</p>
+            <ul>
+                <li>Automatic authorization of payment and placing an order after completing the payment</li>
+                <li>Automatic payment capture for orders</li>
+                <li>Webhooks</li>
+                <li>Refund and delete payment</li>
+                <li>Dedicated integration support for your project (Diamond package)</li>
+            </ul>
 
-        <hr />
-        <p>© 2024 <a href="https://github.com/abdullah-afzal">abdullah-afzal</a></p>
-    </div>
+            <p>The Pro version is available under a commercial license. Contact <a
+                    href="https://github.com/abdullah-afzal">abdullah-afzal</a> for more information.</p>
 
-    <footer>
-        <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
-            data-cal-config='{"layout":"month_view","theme":"auto"}'>
-            Meeting
-        </a>
-        <a href="https://www.linkedin.com/in/abdullah-afzal/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/abdullah-afzal" target="_blank">GitHub</a>
-        <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="_blank">Upwork</a>
+
+        </div>
+    </section>
+
+    <section class="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="social-icons">
+                    <a href="mailto:mr.abdullahafzal@gmail.com" target="_blank" title="Mail"><i
+                            class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/abdullah-afzal" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/abdullah-afzal" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea" target="_blank" title="Upwork"><i
+                            class="fab fa-upwork"></i></a>
+                    <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
+                        data-cal-config='{"layout":"month_view","theme":"auto"}' title="Schedule Meeting"><i
+                            class="fas fa-calendar-alt"></i></a>
+                    <a href="https://flowcv.com/resume/9wcnpheeasei" target="_blank" title="Resume"><i
+                            class="fas fa-file-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer data-aos="fade-up">
+        <div class="container">
+            <p>&copy; 2025 Abdullah Afzal. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init();</script>
+    <script type="text/javascript">
+        (function (C, A, L) {
+            let p = function (a, ar) { a.q.push(ar); };
+            let d = C.document;
+            C.Cal = C.Cal || function () {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                    const api = function () { p(api, arguments); };
+                    const namespace = ar[1];
+                    api.q = api.q || [];
+                    if (typeof namespace === "string") {
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["initNamespace", namespace]);
+                    } else p(cal, ar);
+                    return;
+                }
+                p(cal, ar);
+            };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "free-consultation", { origin: "https://cal.com" });
+        Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
 </body>
 
 </html>

@@ -1,79 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Afzal || Medusa Static Pages - Plugin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medusa Static Pages | Abdullah Afzal</title>
     <meta property="og:title" content="Medusa Static Pages - Plugin" />
     <meta property="og:description"
         content="A plugin that provides a basic static pages backend for your Medusa store." />
-    <meta property="og:type" content="blog" />
+        <meta property="og:type" content="blog" />
     <meta property="og:image" content="https://abdullah-afzal.github.io/media/medusa-static-pages-banner.png" />
     <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
-    <link rel="stylesheet" href="plugin.css">
-    <!-- Cal element-click embed code begins -->
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "free-consultation", { origin: "https://cal.com" });
-        Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
-    </script>
-    <!-- Cal element-click embed code ends -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="navbar">
-        <div class="logo">
-            <a href="/">
-
-                ABDULLAH AFZAL
-
+    <header class="header glass show" data-aos="fade-down">
+        <div class="container header-content">
+            <a href="index.html" class="branding" style="text-decoration: none; color: inherit;">
+                <h1 class="name">Abdullah Afzal</h1>
+                <p class="role">Software Engineer</p>
             </a>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </button>
         </div>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="/about.html">About</a>
-            <a href="/">Blog</a>
-            <a href="/contact.html">Contact</a>
-        </div>
+    </header>
+
+    <div style="margin-left:170px; padding: 2rem; margin-top: 170px;" data-aos="fade-left">
+        <a href="index.html" class="back-link"
+            style="display: inline-flex; align-items: center; font-size: 1rem; color: var(--green); text-decoration: none;">
+            <i class="fas fa-angle-left" style="margin-right: 0.5rem;"></i> Back
+        </a>
     </div>
 
-    <div id="sidebar">
-        <a href="#what-is-it">What is it?</a>
-        <a href="#how-to-install">How to install?</a>
-        <a href="#api-endpoints">API Endpoints</a>
-        <a href="#proposals-bugs-improvements">Proposals, Bugs, Improvements</a>
-        <a href="#license">License</a>
-    </div>
+    <section class="hero" data-aos="zoom-in">
+        <div class="container">
+            <h2 class="hero-title">medusa-plugin-static-pages</h2>
+            <p class="hero-description">A plugin that provides implementation of static pages for your Medusa store. You
+                can use this plugin for
+                creating static pages like FAQ, Policy etc. quite easily for your store.</p>
+        </div>
+    </section>
 
-    <div id="content">
-        <a href="/">plugins</a> > <a>medusa-plugin-static-pages</a>
-        <h1 style="text-align: center;">medusa-plugin-static-pages</h1>
+    <section class="container" data-aos="fade-up">
+        <div class="glass card plugin-section" style="padding: 2rem; line-height: 1.8;">
+            <p><a
+                    href="https://github.com/abdullah-afzal/medusa-plugin-static-pages/blob/main/README.md">Documentation</a>
+            </p>
+            <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the
+                    project
+                    web
+                    site</a>.</p>
+            <h3><i class="fas fa-info-circle"></i> What is it?</h3>
+            <p>A plugin that provides implementation of static pages for your Medusa store. You can use this plugin for
+                creating static pages like FAQ, Policy etc. quite easily for your store.</p>
 
-        <p><a href="https://github.com/abdullah-afzal/medusa-plugin-static-pages/blob/main/README.md">Documentation</a>
-        </p>
-
-        <p>If you are not familiar with Medusa, you can learn more on <a href="https://www.medusajs.com/">the project
-                web
-                site</a>.</p>
-
-        <h2 id="note"><i class="fas fa-bullhorn" style="font-size: 24px; margin-right: 10px;"></i>Note: This plugin is
-            under development and should be considered experimental. Breaking changes are very likely to occur.</h2>
-
-        <h2 id="what-is-it" class="section">What is it?</h2>
-        <p>A plugin that provides implementation of static pages for your Medusa store. You can use this plugin for
-            creating static pages like FAQ, Policy etc. quite easily for your store.</p>
-
-        <h2 id="how-to-install" class="section">How to install?</h2>
-        <ol>
-            <li>Install the package with <code>yarn add medusa-plugin-static-pages</code> or
-                <code>npm i medusa-plugin-static-pages</code>
-            </li>
-            <li>In <code>medusa-config.js</code>, add the plugin to the <code>plugins</code> array and set
-                <code>enableUI</code>
-            </li>
-            <pre><code>const plugins = [
+            <h3><i class="fas fa-code"></i> Installation</h3>
+            <ol>
+                <li>Install the package with <code>yarn add medusa-plugin-static-pages</code> or
+                    <code>npm i medusa-plugin-static-pages</code>
+                </li>
+                <li>In <code>medusa-config.js</code>, add the plugin to the <code>plugins</code> array and set
+                    <code>enableUI</code>
+                </li>
+                <pre><code>const plugins = [
   // ... other plugins
   {
     resolve: `medusa-plugin-static-pages`,
@@ -83,87 +77,87 @@
   }
 ]
 </code></pre>
-            </li>
-            <li>Run migrations, e.g. <code>npx medusa migrations run</code> (see: <a
-                    href="https://docs.medusajs.com/development/entities/migrations/overview">https://docs.medusajs.com/development/entities/migrations/overview</a>)
-                as the plugin uses new tables.</li>
-            <li>Start project
-                <ul>
-                    <li>After installation of the plugin, you will see a new option on the sidebar named
-                        <strong>Static Pages</strong>.
-                    </li>
-                    <li>You can check existing static pages</li>
-                    <li>You can add/edit/delete static pages</li>
-                </ul>
-            </li>
-        </ol>
+                </li>
+                <li>Run migrations, e.g. <code>npx medusa migrations run</code> (see: <a
+                        href="https://docs.medusajs.com/development/entities/migrations/overview">https://docs.medusajs.com/development/entities/migrations/overview</a>)
+                    as the plugin uses new tables.</li>
+                <li>Start project
+                    <ul>
+                        <li>After installation of the plugin, you will see a new option on the sidebar named
+                            <strong>Static Pages</strong>.
+                        </li>
+                        <li>You can check existing static pages</li>
+                        <li>You can add/edit/delete static pages</li>
+                    </ul>
+                </li>
+            </ol>
 
-        <h2 id="api-endpoints" class="section">API Endpoints</h2>
+            <h3><i class="fas fa-server"></i> API Endpoints</h3>
 
-        <h3>Store API Endpoints</h3>
-        <ol>
-            <li><strong><code>GET /store/pages</code></strong>
-                <ul>
-                    <li><strong>Description:</strong> Returns a JSON object containing an array of all page objects.
-                    </li>
-                </ul>
-            </li>
+            <h4>Store API Endpoints</h4>
+            <ol>
+                <li><strong><code>GET /store/pages</code></strong>
+                    <ul>
+                        <li><strong>Description:</strong> Returns a JSON object containing an array of all page objects.
+                        </li>
+                    </ul>
+                </li>
 
-            <li><strong><code>GET /store/page/:handle</code></strong>
-                <ul>
-                    <li><strong>Description:</strong> Returns a JSON object containing a single page object with the
-                        given handle.</li>
-                </ul>
-            </li>
+                <li><strong><code>GET /store/page/:handle</code></strong>
+                    <ul>
+                        <li><strong>Description:</strong> Returns a JSON object containing a single page object with the
+                            given handle.</li>
+                    </ul>
+                </li>
 
-            <li><strong><code>GET /store/page/:id</code></strong>
-                <ul>
-                    <li><strong>Description:</strong> Returns a JSON object containing a single page object with the
-                        given ID.</li>
-                </ul>
-            </li>
-        </ol>
+                <li><strong><code>GET /store/page/:id</code></strong>
+                    <ul>
+                        <li><strong>Description:</strong> Returns a JSON object containing a single page object with the
+                            given ID.</li>
+                    </ul>
+                </li>
+            </ol>
 
-        <h3>Admin API Endpoints</h3>
-        <ol>
-            <li><strong><code>POST /admin/page</code></strong>
-                <ul>
-                    <li><strong>Description:</strong> Creates a new page object.</li>
-                    <li><strong>Request Body:</strong>
-                        <ul>
-                            <li><code>handle</code>: (Required) The handle for the page.</li>
-                            <li><code>title</code>: (Required) The title of the page.</li>
-                            <li><code>metadata</code>: (Optional) Additional metadata for the page.</li>
-                            <li><code>body</code>: (Optional) The content of the page.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+            <h4>Admin API Endpoints</h4>
+            <ol>
+                <li><strong><code>POST /admin/page</code></strong>
+                    <ul>
+                        <li><strong>Description:</strong> Creates a new page object.</li>
+                        <li><strong>Request Body:</strong>
+                            <ul>
+                                <li><code>handle</code>: (Required) The handle for the page.</li>
+                                <li><code>title</code>: (Required) The title of the page.</li>
+                                <li><code>metadata</code>: (Optional) Additional metadata for the page.</li>
+                                <li><code>body</code>: (Optional) The content of the page.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-            <li><strong><code>POST /admin/page/:id</code></strong>
-                <ul>
-                    <li><strong>Description:</strong> Updates an existing page object with the given ID.</li>
-                    <li><strong>Request Body:</strong>
-                        <ul>
-                            <li><code>handle</code>: (Required) The updated handle for the page.</li>
-                            <li><code>title</code>: (Required) The updated title of the page.</li>
-                            <li><code>metadata</code>: (Optional) Updated metadata for the page.</li>
-                            <li><code>body</code>: (Optional) The updated content of the page.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+                <li><strong><code>POST /admin/page/:id</code></strong>
+                    <ul>
+                        <li><strong>Description:</strong> Updates an existing page object with the given ID.</li>
+                        <li><strong>Request Body:</strong>
+                            <ul>
+                                <li><code>handle</code>: (Required) The updated handle for the page.</li>
+                                <li><code>title</code>: (Required) The updated title of the page.</li>
+                                <li><code>metadata</code>: (Optional) Updated metadata for the page.</li>
+                                <li><code>body</code>: (Optional) The updated content of the page.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-            <li><strong><code>DELETE /admin/page/:id</code></strong>
-                <ul>
-                    <li><strong>Description:</strong> Deletes an existing page object by ID.</li>
-                </ul>
-            </li>
-        </ol>
+                <li><strong><code>DELETE /admin/page/:id</code></strong>
+                    <ul>
+                        <li><strong>Description:</strong> Deletes an existing page object by ID.</li>
+                    </ul>
+                </li>
+            </ol>
 
-        <h3>Objects</h3>
+            <h3>Objects</h3>
 
-        <pre><code>page: {
+            <pre><code>page: {
   "id": "string",
   "handle": "string",
   "title": "string",
@@ -173,27 +167,80 @@
   "updated_at": "DateTime"
 }</code></pre>
 
-        <h2 id="proposals-bugs-improvements" class="section">Proposals, Bugs, Improvements</h2>
-        <p>If you have an idea for what could be the next highest priority functionality, do not hesitate to raise an
-            issue
-            here: <a href="https://github.com/abdullah-afzal/medusa-plugin-static-pages/issues">Github issues</a>.</p>
+            <h3><i class="fas fa-star-of-life"></i> Proposals, Bugs, Improvements</h3>
+            <p>If you have an idea for what could be the next highest priority functionality, do not hesitate to raise
+                an
+                issue
+                here: <a href="https://github.com/abdullah-afzal/medusa-plugin-static-pages/issues">Github issues</a>.
+            </p>
 
-        <h2 id="license" class="section">License</h2>
-        <p>MIT</p>
+            <h3 id="license"><i class="fas fa-certificate"></i> License</h3>
+            <p>MIT</p>
+        </div>
+    </section>
 
-        <hr />
-        <p>© 2024 <a href="https://github.com/abdullah-afzal">abdullah-afzal</a></p>
-    </div>
+    <section class="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="social-icons">
+                    <a href="mailto:mr.abdullahafzal@gmail.com" target="_blank" title="Mail"><i
+                            class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/abdullah-afzal" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/abdullah-afzal" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea" target="_blank" title="Upwork"><i
+                            class="fab fa-upwork"></i></a>
+                    <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
+                        data-cal-config='{"layout":"month_view","theme":"auto"}' title="Schedule Meeting"><i
+                            class="fas fa-calendar-alt"></i></a>
+                    <a href="https://flowcv.com/resume/9wcnpheeasei" target="_blank" title="Resume"><i
+                            class="fas fa-file-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
-            data-cal-config='{"layout":"month_view","theme":"auto"}'>
-            Meeting
-        </a>
-        <a href="https://www.linkedin.com/in/abdullah-afzal/" target="blank">LinkedIn</a>
-        <a href="https://github.com/abdullah-afzal" target="blank">GitHub</a>
-        <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="blank">Upwork</a>
+    <footer data-aos="fade-up">
+        <div class="container">
+            <p>&copy; 2025 Abdullah Afzal. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init();</script>
+    <script type="text/javascript">
+        (function (C, A, L) {
+            let p = function (a, ar) { a.q.push(ar); };
+            let d = C.document;
+            C.Cal = C.Cal || function () {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                    const api = function () { p(api, arguments); };
+                    const namespace = ar[1];
+                    api.q = api.q || [];
+                    if (typeof namespace === "string") {
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["initNamespace", namespace]);
+                    } else p(cal, ar);
+                    return;
+                }
+                p(cal, ar);
+            };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "free-consultation", { origin: "https://cal.com" });
+        Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
 </body>
 
 </html>

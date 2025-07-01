@@ -2,52 +2,52 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdullah Afzal || Currency Code Converter - Node.js Module</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Code Converter - Node.js Module | Abdullah Afzal</title>
   <meta property="og:title" content="Currency Code Converter - Node.js Module" />
   <meta property="og:description"
     content="A simple Node.js module for converting between different formats of currency data, including currency, country, code, and number." />
   <meta property="og:type" content="blog" />
   <meta property="og:image" content="https://abdullah-afzal.github.io/media/currency-code-converter-banner.png" />
   <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
-  <link rel="stylesheet" href="plugin.css">
-  <!-- Cal element-click embed code begins -->
-  <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "free-consultation", { origin: "https://cal.com" });
-    Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
-  </script>
-  <!-- Cal element-click embed code ends -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <div id="navbar">
-    <div class="logo">
-      <a href="/">
-
-        ABDULLAH AFZAL
-
+  <header class="header glass show" data-aos="fade-down">
+    <div class="container header-content">
+      <a href="index.html" class="branding" style="text-decoration: none; color: inherit;">
+        <h1 class="name">Abdullah Afzal</h1>
+        <p class="role">Software Engineer</p>
       </a>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <i id="theme-icon" class="fas fa-sun"></i>
+      </button>
     </div>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/">Blog</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-  </div>
-  <div id="sidebar">
-    <a href="#installation">Installation</a>
-    <a href="#usage">Usage</a>
-    <a href="#functions">Functions</a>
-    <a href="#license">License</a>
+  </header>
+
+  <div style="margin-left:170px; padding: 2rem; margin-top: 170px;" data-aos="fade-left">
+    <a href="index.html" class="back-link"
+      style="display: inline-flex; align-items: center; font-size: 1rem; color: var(--green); text-decoration: none;">
+      <i class="fas fa-angle-left" style="margin-right: 0.5rem;"></i> Back
+    </a>
   </div>
 
-  <div id="content">
-    <a href="/">plugin</a> > <a>currency-code-converter</a>
-    <h1 style="text-align: center;">Currency Code Converter</h1>
+  <section class="hero" data-aos="zoom-in">
+    <div class="container">
+      <h2 class="hero-title">currency-code-converter</h2>
+      <p class="hero-description">A simple Node.js module for converting between different formats of currency data,
+        including currency, country, code, and number.</p>
+    </div>
+  </section>
+
+  <section class="container" data-aos="fade-up">
+    <div class="glass card plugin-section" style="padding: 2rem; line-height: 1.8;">
+
 
     <p><a href="https://github.com/abdullah-afzal/currency-code-converter/blob/main/README.md">Documentation</a></p>
 
@@ -159,19 +159,72 @@ export default App;
     <h2 id="license" class="section">License</h2>
     <p>This project is licensed under the MIT License - see the LICENSE file for details.</p>
 
-    <hr />
-    <p>© 2024 <a href="https://github.com/abdullah-afzal">abdullah-afzal</a></p>
+    
   </div>
+  </section>
 
-  <footer>
-    <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
-      data-cal-config='{"layout":"month_view","theme":"auto"}'>
-      Meeting
-    </a>
-    <a href="https://www.linkedin.com/in/abdullah-afzal/" target="blank">LinkedIn</a>
-    <a href="https://github.com/abdullah-afzal" target="blank">GitHub</a>
-    <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea?mp_source=share" target="blank">Upwork</a>
-  </footer>
+  <section class="contact" data-aos="fade-up">
+    <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="social-icons">
+                <a href="mailto:mr.abdullahafzal@gmail.com" target="_blank" title="Mail"><i
+                        class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/abdullah-afzal" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/abdullah-afzal" target="_blank" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea" target="_blank" title="Upwork"><i
+                        class="fab fa-upwork"></i></a>
+                <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
+                    data-cal-config='{"layout":"month_view","theme":"auto"}' title="Schedule Meeting"><i
+                        class="fas fa-calendar-alt"></i></a>
+                <a href="https://flowcv.com/resume/9wcnpheeasei" target="_blank" title="Resume"><i
+                        class="fas fa-file-alt"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer data-aos="fade-up">
+    <div class="container">
+        <p>&copy; 2025 Abdullah Afzal. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>AOS.init();</script>
+<script type="text/javascript">
+    (function (C, A, L) {
+        let p = function (a, ar) { a.q.push(ar); };
+        let d = C.document;
+        C.Cal = C.Cal || function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+                cal.ns = {};
+                cal.q = cal.q || [];
+                d.head.appendChild(d.createElement("script")).src = A;
+                cal.loaded = true;
+            }
+            if (ar[0] === L) {
+                const api = function () { p(api, arguments); };
+                const namespace = ar[1];
+                api.q = api.q || [];
+                if (typeof namespace === "string") {
+                    cal.ns[namespace] = cal.ns[namespace] || api;
+                    p(cal.ns[namespace], ar);
+                    p(cal, ["initNamespace", namespace]);
+                } else p(cal, ar);
+                return;
+            }
+            p(cal, ar);
+        };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "free-consultation", { origin: "https://cal.com" });
+    Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+</script>
 </body>
 
 </html>
