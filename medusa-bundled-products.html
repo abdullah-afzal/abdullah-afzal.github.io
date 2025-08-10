@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medusa Bundled Products | Abdullah Afzal</title>
+    <meta property="og:title" content="Medusa Bundled Products Plugin" />
+    <meta property="og:description"
+        content="A plugin that enables customer to create bundled products on their Medusa store." />
+    <meta property="og:type" content="blog" />
+    <meta property="og:image" content="https://abdullah-afzal.github.io/media/medusa-bundled-products.png" />
+    <link rel="icon" type="image/x-icon" href="/icon/ayin.jpg">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header glass show" data-aos="fade-down">
+        <div class="container header-content">
+            <a href="index.html" class="branding" style="text-decoration: none; color: inherit;">
+                <h1 class="name">Abdullah Afzal</h1>
+                <p class="role">Software Engineer</p>
+            </a>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </button>
+        </div>
+    </header>
+
+    <div style="margin-left:170px; padding: 2rem; margin-top: 170px;" data-aos="fade-left">
+        <a href="index.html" class="back-link"
+            style="display: inline-flex; align-items: center; font-size: 1rem; color: var(--green); text-decoration: none;">
+            <i class="fas fa-angle-left" style="margin-right: 0.5rem;"></i> Back
+        </a>
+    </div>
+
+    <section class="hero" data-aos="zoom-in">
+        <div class="container">
+            <h2 class="hero-title">medusa-bundled-products</h2>
+            <p class="hero-description">A Medusa plugin that adds bundled product functionality — kits, starter packs,
+                and promotional combos.</p>
+        </div>
+    </section>
+
+    <section class="container" data-aos="fade-up">
+        <div class="card plugin-section glass" style="padding: 2rem; line-height: 1.8;">
+            <p><a href="https://github.com/abdullah-afzal/medusa-bundled-products" target="_blank">Repository &amp;
+                    Documentation</a></p>
+
+            <h3><i class="fas fa-info-circle"></i> What is it?</h3>
+            <p>medusa-bundled-products allows you to create and manage bundled products — multiple products sold as a
+                single offering. Use it for starter kits, promotional combos, or curated packs.</p>
+
+            <h3><i class="fas fa-features"></i> Features</h3>
+            <ul>
+                <li>Create bundled products with linked products/variants</li>
+                <li>Set custom bundle pricing</li>
+                <li>Seamless integration with Medusa product and variant models</li>
+                <li>Cart &amp; order handling for bundles</li>
+                <li>Storefront-friendly data shape for easy UI display</li>
+            </ul>
+
+            <h3><i class="fas fa-code-merge"></i> Compatibility</h3>
+            <p>This plugin is compatible with <code>@medusajs/medusa</code> <strong>>= 2.4.0</strong>.</p>
+
+            <h3><i class="fas fa-download"></i> Installation</h3>
+            <ol>
+                <li>Install the package with <code>yarn add medusa-bundled-products</code> or
+                    <code>npm i medusa-bundled-products</code>
+                </li>
+                </li>
+                <li>Add to <code>medusa-config.js</code>:
+                    <pre>
+                        <code>module.exports = defineConfig({
+                            // ...
+                            plugins: [
+                            {
+                                resolve: "medusa-bundled-products",
+                                options: {
+                                    // optional plugin options
+                                },
+                            },
+                            ],
+                        })</code>
+                    </pre>
+                </li>
+            </ol>
+
+            <h3><i class="fas fa-wrench"></i> Development</h3>
+            <p>Run migrations:</p>
+            <pre><code>npx medusa db:migrate</code></pre>
+
+            <h3><i class="fas fa-network-wired"></i> API Endpoints</h3>
+
+            <p class="api-endpoint">POST <code>/admin/bundled-products</code> — Create a bundled product (admin)</p>
+            <p class="api-endpoint">GET <code>/admin/bundled-products</code> — List bundled products (admin)</p>
+            <p class="api-endpoint">GET <code>/store/bundled-products/:id</code> — Get bundle details (store)</p>
+            <p class="api-endpoint">POST <code>/store/cart/:id/line-item-bundles</code> — Add bundle to cart</p>
+            <p class="api-endpoint">DELETE <code>/store/cart/:id/line-item-bundles/:bundle_id</code> — Remove bundle
+                from cart</p>
+
+            <h3><i class="fas fa-shopping-cart"></i> Cart Behavior</h3>
+            <p>Bundles are treated as a single logical unit in the cart. When a bundle is added:</p>
+            <ul>
+                <li>All component items are added together (with quantities)</li>
+                <li>Bundle pricing is applied (price override or computed sum)</li>
+                <li>Inventory checks are performed for each component</li>
+                <li>Removing the bundle removes all its component items from the cart</li>
+            </ul>
+
+            <h3><i class="fas fa-bug"></i> Proposals, Bugs, Improvements</h3>
+            <p>Found a bug or have a feature idea? Please open an issue:</p>
+            <p><a href="https://github.com/abdullah-afzal/medusa-bundled-products/issues" target="_blank">GitHub
+                    Issues</a></p>
+
+            <h3><i class="fas fa-gem"></i> Pro Version</h3>
+            <p>A commercial <strong>Pro</strong> version is available with advanced features (custom UI controls,
+                admin-only bundle controls, analytics hooks, etc.). Contact <a href="https://github.com/abdullah-afzal" target="_blank">abdullah-afzal</a> for licensing and details.</p>
+        </div>
+    </section>
+
+    <section class="contact" data-aos="fade-up">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="social-icons">
+                    <a href="mailto:mr.abdullahafzal@gmail.com" target="_blank" title="Mail"><i
+                            class="fa-regular fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/abdullah-afzal" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/abdullah-afzal" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~01202ed888cb922eea" target="_blank" title="Upwork"><i
+                            class="fab fa-upwork"></i></a>
+                    <a href="#" data-cal-link="abdullah-afzal/free-consultation" data-cal-namespace="free-consultation"
+                        data-cal-config='{"layout":"month_view","theme":"auto"}' title="Schedule Meeting"><i
+                            class="fas fa-calendar-alt"></i></a>
+                    <a href="https://flowcv.com/resume/9wcnpheeasei" target="_blank" title="Resume"><i
+                            class="fas fa-file-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer data-aos="fade-up">
+        <div class="container">
+            <p>&copy; 2025 Abdullah Afzal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>AOS.init();</script>
+    <script type="text/javascript">
+        (function (C, A, L) {
+            let p = function (a, ar) { a.q.push(ar); };
+            let d = C.document;
+            C.Cal = C.Cal || function () {
+                let cal = C.Cal;
+                let ar = arguments;
+                if (!cal.loaded) {
+                    cal.ns = {};
+                    cal.q = cal.q || [];
+                    d.head.appendChild(d.createElement("script")).src = A;
+                    cal.loaded = true;
+                }
+                if (ar[0] === L) {
+                    const api = function () { p(api, arguments); };
+                    const namespace = ar[1];
+                    api.q = api.q || [];
+                    if (typeof namespace === "string") {
+                        cal.ns[namespace] = cal.ns[namespace] || api;
+                        p(cal.ns[namespace], ar);
+                        p(cal, ["initNamespace", namespace]);
+                    } else p(cal, ar);
+                    return;
+                }
+                p(cal, ar);
+            };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "free-consultation", { origin: "https://cal.com" });
+        Cal.ns["free-consultation"]("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+    </script>
+
+</body>
+
+</html>
