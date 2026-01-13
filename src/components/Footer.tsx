@@ -5,12 +5,7 @@ const Footer = () => {
     <footer className="py-8 border-t border-border">
       <div className="section-container">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <span>Built with</span>
-            <Heart className="w-4 h-4 text-primary fill-primary" />
-            <span>by Abdullah Afzal</span>
-          </div>
-
+          
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/abdullah-afzal"
