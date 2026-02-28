@@ -41,7 +41,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Full Stack Developer with <span className="text-foreground font-semibold">3+ years</span> of experience 
+              Full Stack Developer with <span className="text-foreground font-semibold">5+ years</span> of experience 
               building scalable, production-grade web applications. I specialize in creating robust 
               solutions that handle complex business requirements while maintaining clean, maintainable code.
             </p>
