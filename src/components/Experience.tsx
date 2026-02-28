@@ -14,7 +14,7 @@ const EXPERIENCES = [
     company: "Medusajs.club",
     role: "Software Engineer",
     period: "2023 — 2024",
-    logo: "medusajs.png",
+    logo: "mjc.png",
     achievements: [
     ]
   },
@@ -22,7 +22,7 @@ const EXPERIENCES = [
     company: "CodeTuple Solutions",
     role: "Software Engineer",
     period: "2023 — 2024",
-    logo: "codetuple.svg",
+    logo: "ct.png",
     achievements: [
       "Built and maintained 7+ full-scale web applications using Next.js, React, TypeScript, and Node.js",
       "Developed 12+ custom backend plugins including payments, reviews, automation, and ERP integrations",
@@ -67,7 +67,7 @@ const Experience = () => {
                 <div className="glass rounded-xl p-6 md:p-8 transition-all hover:border-primary/50">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center ">
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center p-1">
                         <img
                           src={exp.logo}
                           alt={exp.company}
